@@ -33,5 +33,5 @@ echo "DISK = $DISK"
 echo "EFI_PART_SIZE = $EFI_PART_SIZE"
 echo "LVM_PART_SIZE = $LVM_PART_SIZE"
 
-require_file "$project_dir/config/install/steps.cfg"
+require_file "$project_dir/config/install/steps.sh"
 
