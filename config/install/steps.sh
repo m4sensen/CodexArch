@@ -29,8 +29,8 @@ require_file "$project_dir/tasks/install/Setup_users.sh"
 
 require_file "$project_dir/tasks/install/Setup_network.sh"
 
-require_file "$project_dir/tasks/Microcode.sh"
-require_file "$project_dir/tasks/Graphics_drivers.sh"
+require_file "$project_dir/tasks/install/Microcode.sh
+require_file "$project_dir/tasks/install/Graphics_drivers.sh"
 
 
 require_file "$project_dir/tasks/install/Setup_window_managers.sh"
@@ -38,7 +38,7 @@ require_file "$project_dir/tasks/install/Setup_window_managers.sh"
 require_file "$project_dir/tasks/install/Required_packages.sh"
 require_file "$project_dir/tasks/install/Stores_setup.sh"
 
-require_file "$project_dir/tasks/install/reboot.sh"
+require_file "$project_dir/tasks/install/Reboot.sh"
 
 
 

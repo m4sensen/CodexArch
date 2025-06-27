@@ -1,3 +1,3 @@
-flatpack_store_install() {
+flatpak_store_install() {
     sudo pacman -S flatpak
 }

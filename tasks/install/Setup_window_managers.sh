@@ -1,4 +1,4 @@
-pacman -S xorg gnome gnome-tweaks gdm
+install xorg gnome gnome-tweaks gdm
 
 # pacman -S brightnessctl foot grim pavucontrol slurp sway swaybg swayidle swaylock waybar wmenu xorg-xwayland
 
