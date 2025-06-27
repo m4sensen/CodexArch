@@ -1,4 +1,4 @@
-nano nano /etc/locale.gen
+nano /etc/locale.gen
 locale-gen
 
 #Uncomment this line:
