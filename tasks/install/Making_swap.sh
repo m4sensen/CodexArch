@@ -1,4 +1,4 @@
-logCreate "Creating swap on /dev/mapper/vg0-swap..."
+logAttempt "create swap on /dev/mapper/vg0-swap..."
 if mkswap /dev/mapper/vg0-swap; then
   logSuccess "Swap created successfully."
 else

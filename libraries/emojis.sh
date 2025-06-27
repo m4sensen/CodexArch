@@ -41,6 +41,7 @@ ATTENTION_EMOJI="❗️ "
 BELL_EMOJI="🔔 "
 MUTE_EMOJI="🔇 "
 SPEAKER_EMOJI="🔊 "
+REQUEST_EMOJI="🙏"
 
 # ⚙️ System & Tools
 SETTINGS_EMOJI="⚙️ "

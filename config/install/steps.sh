@@ -35,7 +35,6 @@ require_file "$projectDir/tasks/Graphics_drivers.sh"
 
 require_file "$projectDir/tasks/install/Setup_window_managers.sh"
 
-require_file "$projectDir/tasks/install/Enable_services.sh"
 require_file "$projectDir/tasks/install/Required_packages.sh"
 require_file "$projectDir/tasks/install/Stores_setup.sh"
 
