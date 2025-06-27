@@ -1,8 +1,9 @@
+hr "="
 lsblk
-
+hr "="
 read -rp "Enter disk device (e.g., /dev/sda): " DISK
 if [ ! -b "$DISK" ]; then
-    echo "Error: $DISK is not a valid block device."
+    logError "$DISK is not a valid block device."
     exit 1
 fi
 

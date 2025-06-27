@@ -3,12 +3,12 @@ project_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 import_utils() {
 
-  local utils_dirs=("$project_dir/lib" "$project_dir/functions")
+  local utils_dirs=("$project_dir/libraries" "$project_dir/functions")
   local loaded_utils_count=0
 
   for utils_dir in "${utils_dirs[@]}"; do
     if [[ -d "$utils_dir" ]]; then
-      echo "Searching for functions in: $utils_dir"
+      echo "Searching for functions and libraries in: $utils_dir"
       # Use a for loop with globbing and check for existence before sourcing
       for file in "$utils_dir"/*.sh; do
         if [[ -f "$file" ]]; then
@@ -88,13 +88,8 @@ import_utils || { echo "Failed to initialize framework functions."; sleep 10; ex
 import_codexBash_cfg || logExit "Failed to load framework configuration."
 
 # Display framework information
-logSuccess "${FRAMEWORK_NAME} framework © Masensen has been started successfully"
-
-# Example usage of emoji_toggle (assuming EMOJI_SUCCESS and USE_EMOJI are defined in codexBash.cfg or elsewhere)
-# E.g., if codexBash.cfg contains:
-# USE_EMOJI=true
-# EMOJI_SUCCESS="✅"
-# echo "Operation complete: $(emoji_toggle success)"
-
-
+hr "="
+logSuccess "${RESET}${BOLD}${GREEN_500}${ITALIC}${FRAMEWORK_NAME} framework © Masensen${RESET},${GREEN_500}${BOLD} has been started successfully."
+hr "="
+logStart "Starting CodexArch ..."
 require_file "$project_dir/menu.sh"

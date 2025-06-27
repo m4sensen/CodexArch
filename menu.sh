@@ -1,4 +1,4 @@
-logStart "Starting CodexArch ..."
+hr "="
 logLogo "
  ██████╗ ██████╗ ██████╗ ███████╗██╗  ██╗     █████╗ ██████╗  ██████╗██╗  ██╗
 ██╔════╝██╔═══██╗██╔══██╗██╔════╝╚██╗██╔╝    ██╔══██╗██╔══██╗██╔════╝██║  ██║
@@ -7,34 +7,34 @@ logLogo "
 ╚██████╗╚██████╔╝██████╔╝███████╗██╔╝ ██╗    ██║  ██║██║  ██║╚██████╗██║  ██║
  ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝
 "
-logTitle "CodexArch menu :"
+hr "="
+logCopyright "CodexArch © Masensen"
+hr "="
+logTitle "CodexArch menu:"
 
-echo "Choose an option:"
-options=("Install" "Troubleshooting" "Format" "Exit")
+echo "Choose an action to continue:"
+menu_options=("Install" "Troubleshooting" "Format" "Exit")
 
-select opt in "${options[@]}"; do
-    case $opt in
+select menu_option in "${menu_options[@]}"; do
+    case $menu_option in
         "Install")
-            echo "You chose to Install."
-            # Add your install logic here
-            break
+            logChoice "You chose to Install."
+            require_file "$project_dir/bin/install.sh"
             ;;
-        "Backup")
-            echo "You chose to Backup."
-            # Add your backup logic here
-            break
+        "Troubleshooting")
+            logChoice "You chose Troubleshooting."
+            require_file "$project_dir/bin/troubleshoot.sh"
             ;;
-        "Restore")
-            echo "You chose to Restore."
-            # Add your restore logic here
-            break
+        "Format")
+            logChoice "You chose to Format."
+            require_file "$project_dir/bin/Format.sh"
             ;;
         "Exit")
-            echo "Exiting."
-            break
+            logChoice "You chose to exit"
+            require_file "$project_dir/bin/exit.sh"
             ;;
         *)
-            echo "❌ Invalid option. Try again."
+            logError "Invalid option. Try again."
             ;;
     esac
 done

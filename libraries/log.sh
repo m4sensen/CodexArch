@@ -55,13 +55,31 @@ logStart() {
 }
 
 logActive() {
-  echo -e "${GREEN_500}${BOLD}$(emoji_toggle hint)[active] $(date +'%Y-%m-%d %H:%M:%S') $*${RESET}"
+  echo -e "${GREEN_500}${BOLD}$(emoji_toggle hint)[ACTIVE] $(date +'%Y-%m-%d %H:%M:%S') $*${RESET}"
 }
 
 logLogo() {
-  echo -e "${NEUTRAL_500}$*${RESET}"
+  echo -e "${NEUTRAL_500}"
+  center_multiline_text <<< "$*"
+  echo -e "${RESET}"
+}
+
+logCopyright() {
+ echo -e "${ZINC_500}${ITALIC}$(center_text "$*")${RESET}"
 }
 
 logTitle() {
-  echo -e "${INDIGO_500}${BOLD}$*${RESET}"
+  echo -e "${INDIGO_500}${BOLD}${UNDERLINE}# $*${RESET}"
+}
+
+logChoice() {
+  echo -e "${AMBER_500}${BOLD}$(emoji_toggle target)[CHOISE] $(date +'%Y-%m-%d %H:%M:%S') $*${RESET}"
+}
+
+logHr() {
+  echo -e "${WHITE}$*${RESET}"
+}
+
+logRequest() {
+echo -e "${FUCHSIA_500}${BOLD}$(emoji_toggle hint)[REQUEST] $(date +'%Y-%m-%d %H:%M:%S') Please $*${RESET}"
 }
