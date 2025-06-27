@@ -13,13 +13,15 @@ require_file "$projectDir/tasks/install/Formating_root.sh"
 require_file "$projectDir/tasks/install/Making_swap.sh"
 
 require_file "$projectDir/tasks/install/Base_system_setup.sh"
+
+# ==== #
+
 require_file "$projectDir/tasks/install/Configure_bootloader.sh"
 
 require_file "$projectDir/tasks/install/Root_password_setup.sh"
 require_file "$projectDir/tasks/install/Setup_users.sh"
 
 
-# require_file "$projectDir/bash/install/Setup_users.sh"
 # require_file "$projectDir/bash/install/Setup_network.sh"
 # require_file "$projectDir/bash/install/Setup_window_managers.sh"
 # require_file "$projectDir/bash/install/Enable_services.sh"

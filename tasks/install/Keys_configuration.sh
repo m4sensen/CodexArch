@@ -6,3 +6,5 @@ pacman-key --populate archlinux
 
 # 3. Refresh keys
 pacman-key --refresh-keys
+
+pacman -Syy
