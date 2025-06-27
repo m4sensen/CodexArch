@@ -83,3 +83,10 @@ logHr() {
 logRequest() {
 echo -e "${FUCHSIA_500}${BOLD}$(emoji_toggle hint)[REQUEST] $(date +'%Y-%m-%d %H:%M:%S') Please $*${RESET}"
 }
+
+
+
+
+logAttempt() {
+  
+}

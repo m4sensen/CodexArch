@@ -1,4 +1,5 @@
 nano nano /etc/locale.gen
+locale-gen
 
 #Uncomment this line:
 # en_US.UTF-8 UTF-8
@@ -6,4 +7,3 @@ nano nano /etc/locale.gen
 # fr_FR.UTF-8 UTF-8
 # Step 2: Generate the locale
 
-locale-gen
