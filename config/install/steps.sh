@@ -14,21 +14,37 @@ require_file "$projectDir/tasks/install/Making_swap.sh"
 
 require_file "$projectDir/tasks/install/Base_system_setup.sh"
 
-# ==== #
+# === ==== #
+require_file "$projectDir/tasks/install/Time_configuration.sh"
+require_file "$ProjectDir/tasks/install/Language_configuration.sh"
+require_file "$projectDir/tasks/install/Hostname_configuration.sh"
+require_file "$projectDir/tasks/install/Keys_configuration.sh"
+require_file "$projectDir/tasks/install/Mirror_configuration.sh"
+# === === #
 
 require_file "$projectDir/tasks/install/Configure_bootloader.sh"
 
 require_file "$projectDir/tasks/install/Root_password_setup.sh"
 require_file "$projectDir/tasks/install/Setup_users.sh"
 
+require_file "$projectDir/tasks/install/Setup_network.sh"
 
-# require_file "$projectDir/bash/install/Setup_network.sh"
-# require_file "$projectDir/bash/install/Setup_window_managers.sh"
-# require_file "$projectDir/bash/install/Enable_services.sh"
-# require_file "$projectDir/bash/install/CodexBox_setup.sh"
-# require_file "$projectDir/bash/install/Optional_package.sh"
-# require_file "$projectDir/bash/install/Flatpack_setup.sh"
-# require_file "$projectDir/bash/install/Snap_setup.sh"
+require_file "$projectDir/tasks/Microcode.sh"
+require_file "$projectDir/tasks/Graphics_drivers.sh"
 
 
-# require_file "$projectDir/tasks/install/Hostname_configuration.sh"
+require_file "$projectDir/tasks/install/Setup_window_managers.sh"
+
+require_file "$projectDir/tasks/install/Enable_services.sh"
+require_file "$projectDir/tasks/install/Required_packages.sh"
+require_file "$projectDir/tasks/install/Stores_setup.sh"
+
+require_file "$projectDir/tasks/install/reboot.sh"
+
+
+
+
+
+
+
+
