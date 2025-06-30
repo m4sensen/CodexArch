@@ -3,71 +3,71 @@ log() {
 }
 
 logSuccess() {
-  echo -e "${SUCCESS_COLOR}${BOLD}$(emoji_toggle success)[SUCCESS] $(date +'%Y-%m-%d %H:%M:%S') $*'.'${RESET}"
+  echo -e "${SUCCESS_COLOR}${BOLD}$(toggle_emojis success)[SUCCESS] $(date +'%Y-%m-%d %H:%M:%S') $*'.'${RESET}"
 }
 
 logError() {
-  echo -e "${ERROR_COLOR}${BOLD}$(emoji_toggle error)[ERROR] $(date +'%Y-%m-%d %H:%M:%S') $*'.'${RESET}" >&2
+  echo -e "${ERROR_COLOR}${BOLD}$(toggle_emojis error)[ERROR] $(date +'%Y-%m-%d %H:%M:%S') $*'.'${RESET}" >&2
 }
 
 logWarn() {
-  echo -e "${WARN_COLOR}${BOLD}$(emoji_toggle warn)[WARN] $(date +'%Y-%m-%d %H:%M:%S') $*'.'${RESET}" >&2
+  echo -e "${WARN_COLOR}${BOLD}$(toggle_emojis warn)[WARN] $(date +'%Y-%m-%d %H:%M:%S') $*'.'${RESET}" >&2
 }
 
 logQuestion() {
-  echo -e "${QUESTION_COLOR}${BOLD}$(emoji_toggle question)[QUESTION] $(date +'%Y-%m-%d %H:%M:%S') $*'?'${RESET}"
+  echo -e "${QUESTION_COLOR}${BOLD}$(toggle_emojis question)[QUESTION] $(date +'%Y-%m-%d %H:%M:%S') $*'?'${RESET}"
 }
 
 logCheck() {
-  echo -e "${CHECK_COLOR}${BOLD}$(emoji_toggle check)[CHECK] $(date +'%Y-%m-%d %H:%M:%S') Checking for $*'.'${RESET}"
+  echo -e "${CHECK_COLOR}${BOLD}$(toggle_emojis check)[CHECK] $(date +'%Y-%m-%d %H:%M:%S') Checking for $*'.'${RESET}"
 }
 
 logUpload() {
-  echo -e "${UPLOAD_COLOR}${BOLD}$(emoji_toggle upload)[UPLOAD] $(date +'%Y-%m-%d %H:%M:%S') Uploading $*'.'${RESET}"
+  echo -e "${UPLOAD_COLOR}${BOLD}$(toggle_emojis upload)[UPLOAD] $(date +'%Y-%m-%d %H:%M:%S') Uploading $*'.'${RESET}"
 }
 
 logDownload() {
-  echo -e "${DOWNLOAD_COLOR}${BOLD}$(emoji_toggle download)[DOWNLOAD] $(date +'%Y-%m-%d %H:%M:%S') Downloading $*'.'${RESET}"
+  echo -e "${DOWNLOAD_COLOR}${BOLD}$(toggle_emojis download)[DOWNLOAD] $(date +'%Y-%m-%d %H:%M:%S') Downloading $*'.'${RESET}"
 }
 
 logStart() {
-  echo -e "${START_COLOR}${BOLD}$(emoji_toggle start)[START] $(date +'%Y-%m-%d %H:%M:%S') Starting $*'.'${RESET}"
+  echo -e "${START_COLOR}${BOLD}$(toggle_emojis start)[START] $(date +'%Y-%m-%d %H:%M:%S') Starting $*'.'${RESET}"
 }
 
 logChoice() {
-  echo -e "${CHOISE_COLOR}${BOLD}$(emoji_toggle target)[CHOISE] $(date +'%Y-%m-%d %H:%M:%S') You chose to $*'.'${RESET}"
+  echo -e "${CHOISE_COLOR}${BOLD}$(toggle_emojis target)[CHOISE] $(date +'%Y-%m-%d %H:%M:%S') You chose to $*'.'${RESET}"
 }
 
 logChoiceLabel() {
-  echo -e "${CHOISE_COLOR}${BOLD}$(emoji_toggle select)   $*${RESET}"
+  echo -e "${CHOISE_COLOR}${BOLD}$(toggle_emojis select)   $*${RESET}"
 }
 
 logRequest() {
-  echo -e "${REQUEST_COLOR}${BOLD}$(emoji_toggle request)[REQUEST] $(date +'%Y-%m-%d %H:%M:%S') Please $*'.'${RESET}"
+  echo -e "${REQUEST_COLOR}${BOLD}$(toggle_emojis request)[REQUEST] $(date +'%Y-%m-%d %H:%M:%S') Please $*'.'${RESET}"
 }
 
 logAttempt() {
-  echo -e "${ATTEMPT_COLOR}${BOLD}$(emoji_toggle tool)[ATTEMPT] $(date +'%Y-%m-%d %H:%M:%S') Attempt to $*'...'${RESET}"
+  echo -e "${ATTEMPT_COLOR}${BOLD}$(toggle_emojis tool)[ATTEMPT] $(date +'%Y-%m-%d %H:%M:%S') Attempt to $*'...'${RESET}"
 }
 
 logHint() {
-  echo -e "${HINT_COLOR}${BOLD}$(emoji_toggle hint)[HINT] $(date +'%Y-%m-%d %H:%M:%S') $*'.'${RESET}"
+  echo -e "${HINT_COLOR}${BOLD}$(toggle_emojis hint)[HINT] $(date +'%Y-%m-%d %H:%M:%S') $*'.'${RESET}"
 }
 
 logSkip() {
-  echo -e "${SKIP_COLOR}${BOLD}$(emoji_toggle skip)[SKIP] $(date +'%Y-%m-%d %H:%M:%S') Skipping $*'...'${RESET}"
+  echo -e "${SKIP_COLOR}${BOLD}$(toggle_emojis skip)[SKIP] $(date +'%Y-%m-%d %H:%M:%S') Skipping $*'...'${RESET}"
 }
 
 logUnmount(){
-echo -e "${UNMOUNT_COLOR}${BOLD}$(emoji_toggle pin)[UNMOUNT] $(date +'%Y-%m-%d %H:%M:%S') Unmounting $*'...'${RESET}"
+echo -e "${UNMOUNT_COLOR}${BOLD}$(toggle_emojis pin)[UNMOUNT] $(date +'%Y-%m-%d %H:%M:%S') Unmounting $*'...'${RESET}"
 }
 
 logMount() {
-echo -e "${MOUNT_COLOR}${BOLD}$(emoji_toggle pin)[MOUNT] $(date +'%Y-%m-%d %H:%M:%S') Mounting $*'...'${RESET}"
+echo -e "${MOUNT_COLOR}${BOLD}$(toggle_emojis pin)[MOUNT] $(date +'%Y-%m-%d %H:%M:%S') Mounting $*'...'${RESET}"
 }
 
 logInfo() {
-  echo -e "${INFO_COLOR}${BOLD}$(emoji_toggle info)[INFO] $(date +'%Y-%m-%d %H:%M:%S') $*'.'${RESET}"
+  echo -e "${INFO_COLOR}${BOLD}$(toggle_emojis info)[INFO] $(date +'%Y-%m-%d %H:%M:%S') $*'.'${RESET}"
 }
 
 logBreak() {
