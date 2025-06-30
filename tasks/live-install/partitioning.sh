@@ -113,7 +113,7 @@ logAttempt "create GPT partition table"
 parted -s "$DISK" mklabel gpt || { logError "Failed to create GPT label."; exit 1; }
 
 # Create EFI partition
-logAttempt "create EFI partition"
+logAttempt "create EFI partition with ${EFI_PART_SIZE_MIB}MiB / ${EFI_PART_SIZE_MIB}GiB"
 parted -s "$DISK" mkpart ESP fat32 1MiB "${EFI_PART_SIZE_MIB}MiB" || exit 1
 parted -s "$DISK" set 1 esp on || exit 1
 
