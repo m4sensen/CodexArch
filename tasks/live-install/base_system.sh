@@ -1,6 +1,6 @@
-hr "_"
+separator "_"
 logTitle "Base system"
-hr "_"
+separator "_"
 
 logAttempt "modify ParallelDownloads in /etc/pacman.conf ..."
 # set_parallel_downloads

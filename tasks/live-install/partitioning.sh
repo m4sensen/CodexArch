@@ -122,7 +122,7 @@ ROOT_START_MiB=$((EFI_PART_SIZE_MiB + 1))
 ROOT_END_MiB=$((ROOT_START_MiB + ROOT_PART_SIZE_MiB))
 logAttempt "create ROOT partition"
 parted -s "$DISK" mkpart primary "${ROOT_START_MiB}MiB" "${ROOT_END_MiB}MiB" || exit 1
-parted -s "$DISK" set 2 root on || exit 1
+# parted -s "$DISK" set 2 root on || exit 1
 
 # Create EXT4 partition in remaining space
 PART3_START_MiB=$((ROOT_END_MiB + 1))

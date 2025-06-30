@@ -6,9 +6,9 @@ logLogo "
 ╚██████╗╚██████╔╝██████╔╝███████╗██╔╝ ██╗    ██║  ██║██║  ██║╚██████╗██║  ██║
  ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝
 "
-hr "="
+separator "="
 logCopyright "CodexArch © Masensen"
-hr "="
+separator "="
 logTitle "CodexArch menu:"
 
 echo "Choose an action to continue:"

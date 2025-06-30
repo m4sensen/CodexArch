@@ -1,6 +1,6 @@
-hr "_"
+separator "_"
 logTitle "Luks partitioning"
-hr "_"
+separator "_"
 
 logAttempt "format ${DISK}2 partition with LUKS"
 cryptsetup luksFormat ${DISK}2
@@ -28,6 +28,6 @@ logAttempt "create logical volume 'root' (remaining space)"
 lvcreate -l 100%FREE vg0 -n root
 # logSuccess "Logical volume 'root' created"
 
-hr "*"
+separator "*"
 lsblk
-hr "*"
+separator "*"

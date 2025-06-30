@@ -1,6 +1,6 @@
-hr "_"
+separator "_"
 logTitle "Swap partitioning"
-hr "_"
+separator "_"
 
 logAttempt "create swap on /dev/mapper/vg0-swap..."
 if mkswap /dev/mapper/vg0-swap; then

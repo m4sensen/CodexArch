@@ -1,6 +1,6 @@
-hr "_"
+separator "_"
 logTitle "Root partitioning"
-hr "_"
+separator "_"
 
 # Format root logical volume as Btrfs
 logAttempt "format /dev/mapper/vg0-root with Btrfs..."
@@ -25,10 +25,10 @@ btrfs subvolume create /mnt/@pkg
 btrfs subvolume create /mnt/@tmp
 # logSuccess "Subvolumes created successfully."
 
-hr "="
+separator "="
 logInfo "Listing created subvolumes:"
 btrfs subvolume list /mnt
-hr "="
+separator "="
 
 # Unmount before remounting with options
 logAttempt "unmount /mnt to remount subvolumes with options..."

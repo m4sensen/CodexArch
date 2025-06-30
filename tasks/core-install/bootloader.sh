@@ -1,6 +1,6 @@
-hr "_"
+separator "_"
 logTitle "Bootloader"
-hr "_"
+separator "_"
 
 logAttempt "install grub and efibootmgr."
 install grub efibootmgr
