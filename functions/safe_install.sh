@@ -1,4 +1,4 @@
-install() {
+safe_install() {
   local packages=("$@")
   local status=1
 
