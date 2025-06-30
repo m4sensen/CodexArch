@@ -1,5 +1,3 @@
-require_file "$PROJECT_DIR/bin/universal_install.sh"
-
 require_file "$PROJECT_DIR/tasks/live-install/partitioning.sh"
 require_file "$PROJECT_DIR/tasks/live-install/boot_partitioning.sh"
 require_file "$PROJECT_DIR/tasks/live-install/luks_partitioning.sh"
