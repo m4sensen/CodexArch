@@ -34,7 +34,7 @@ select menu_option in "${menu_options[@]}"; do
             ;;
         "Format")
             logChoice "You chose to Format."
-            require_file "$PROJECT_DIR/bin/Format.sh"
+            require_file "$PROJECT_DIR/bin/format.sh"
             ;;
         "Exit")
             logChoice "You chose to exit"

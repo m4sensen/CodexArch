@@ -1,8 +1,8 @@
 # Full Zero-wipe
 
-logWarning "This command ${BOLD}completely erases${BOLD} all data on the disk. Make sure to **back up** any important data before proceeding."
+logWarn "This command ${BOLD}completely erases${BOLD} all data on the disk. Make sure to **back up** any important data before proceeding."
 
-logQuestion "Do you wanna continue ?"
+logQuestion "Do you wanna continue"
 
 read -p "Enter you're choice: (y, n)" choice
 
