@@ -3,7 +3,7 @@ PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DATE="$(date +'%Y-%m-%d %H:%M:%S')"
 
 require_Loader() {
-  local file="$PROJECT_DIR/framework/Loader/loader.sh"
+  local file="$PROJECT_DIR/framework/loader/loader.sh"
 
   if [ -f "$file" ]; then
     source "$file"

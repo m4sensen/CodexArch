@@ -9,7 +9,7 @@ while true; do
     read -rp "Enter your timezone (e.g., America/New_York): " TIMEZONE
 
     if [ -f "/usr/share/zoneinfo/$TIMEZONE" ]; then
-    echo "TIMEZONE=$TIMEZONE" >> "$project_dir/config/codexArch.cfg"
+    echo "TIMEZONE=$TIMEZONE" >> "$PROJECT_DIR/config/codexArch.cfg"
     break
     else
     logError "Timezone '$TIMEZONE' does not exist."
@@ -42,8 +42,8 @@ while true; do
     read -rp "Enter disk device (e.g., /dev/sda): " DISK
 
     if [ -b "$DISK" ]; then
-        mkdir -p "$project_dir/config"
-        echo "DISK=$DISK" >> "$project_dir/config/codexArch.cfg"
+        mkdir -p "$PROJECT_DIR/config"
+        echo "DISK=$DISK" >> "$PROJECT_DIR/config/codexArch.cfg"
         logSuccess "Disk path saved to config."
         break
     else
@@ -66,13 +66,13 @@ DISK_SIZE_BYTES=$(blockdev --getsize64 "$DISK")
 DISK_SIZE_GiB=$((DISK_SIZE_BYTES / 1024 / 1024 / 1024))
 
 logInfo "Disk size: $DISK_SIZE_GiB"
-echo "DISK_SIZE_GiB=$DISK_SIZE_GiB" >> "$project_dir/config/codexArch.cfg"
+echo "DISK_SIZE_GiB=$DISK_SIZE_GiB" >> "$PROJECT_DIR/config/codexArch.cfg"
 logSuccess "Disk size saved to config."
 
 # Prompt for EFI size
 read -rp "Enter EFI partition size: " EFI_PART_SIZE_GiB
 EFI_PART_SIZE_GiB=${EFI_PART_SIZE_GiB:-1}
-echo "EFI_PART_SIZE_GiB=$EFI_PART_SIZE_GiB" >> "$project_dir/config/codexArch.cfg"
+echo "EFI_PART_SIZE_GiB=$EFI_PART_SIZE_GiB" >> "$PROJECT_DIR/config/codexArch.cfg"
 logSuccess "EFI size saved to config."
 
 # Prompt for ROOT size with % support
@@ -85,10 +85,10 @@ else
     ROOT_PART_SIZE="$ROOT_PART_INPUT"
 fi
 
-echo "ROOT_PART_SIZE=$ROOT_PART_SIZE" >> "$project_dir/config/codexArch.cfg"
+echo "ROOT_PART_SIZE=$ROOT_PART_SIZE" >> "$PROJECT_DIR/config/codexArch.cfg"
 logSuccess "EFI size saved to config."
 
 
-cat "$project_dir/config/codexArch.cfg"
+cat "$PROJECT_DIR/config/codexArch.cfg"
 
 read -p "Press enter to continue :"

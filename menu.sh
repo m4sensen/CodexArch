@@ -18,27 +18,27 @@ select menu_option in "${menu_options[@]}"; do
     case $menu_option in
         "Install")
             logChoice "Install"
-            require_file "$project_dir/bin/install.sh"
+            require_file "$PROJECT_DIR/bin/install.sh"
             ;;
         "Live install")
             logChoice "Live install"
-            require_file "$project_dir/bin/live_install.sh"
+            require_file "$PROJECT_DIR/bin/live_install.sh"
             ;;
         "Core install")
             logChoice "Core install"
-            require_file "$project_dir/bin/core_install.sh"
+            require_file "$PROJECT_DIR/bin/core_install.sh"
             ;;
         "Troubleshooting")
             logChoice "You chose Troubleshooting."
-            require_file "$project_dir/bin/troubleshoot.sh"
+            require_file "$PROJECT_DIR/bin/troubleshoot.sh"
             ;;
         "Format")
             logChoice "You chose to Format."
-            require_file "$project_dir/bin/Format.sh"
+            require_file "$PROJECT_DIR/bin/Format.sh"
             ;;
         "Exit")
             logChoice "You chose to exit"
-            require_file "$project_dir/bin/exit.sh"
+            require_file "$PROJECT_DIR/bin/exit.sh"
             ;;
         *)
             logError "Invalid option. Try again."
