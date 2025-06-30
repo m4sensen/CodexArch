@@ -1,5 +1,5 @@
 separator "="
-logHeading "Step 03: Locale"
+logTitle "Step 03: Locale"
 separator "="
 
 logAttempt "open /etc/locale.gen for editing"

@@ -1,5 +1,5 @@
 separator "="
-logHeading "Step 02: Time"
+logTitle "Step 02: Time"
 separator "="
 
 # Sync time from the internet

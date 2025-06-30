@@ -1,5 +1,5 @@
 separator "_"
-logHeading "Boot partitioning"
+logTitle "Boot partitioning"
 separator "_"
 
 logAttempt "format ${DISK}1 EFI partition to FAT32"

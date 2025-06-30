@@ -1,5 +1,5 @@
 separator "="
-logHeading "Step 04: Host setup"
+logTitle "Step 04: Host setup"
 separator "="
 
 logAttempt "open /etc/hostname for editing..."

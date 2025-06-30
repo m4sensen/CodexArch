@@ -1,5 +1,5 @@
 separator "="
-logHeading "Step 01: Variable configuration"
+logTitle "Step 01: Variable configuration"
 separator "*"
 lsblk   # List block devices so the user can see available disks
 separator "*"
@@ -9,14 +9,14 @@ while true; do
     read -rp "Enter your timezone (e.g., America/New_York): " TIMEZONE
 
     if [ -f "/usr/share/zoneinfo/$TIMEZONE" ]; then
-    echo "TIMEZONE=$TIMEZONE" >> "$PROJECT_DIR/config/codexArch.cfg"
+    echo "TIMEZONE=$TIMEZONE" > "$PROJECT_DIR/config/codexArch.cfg"
     break
     else
     logError "Timezone '$TIMEZONE' does not exist."
     logChoiceLabel "Options:"
         logChoice "[1] Try again"
         logChoice "[2] Exit"
-        read -rp "Select an option [1/2]: " choice
+        read -rp "Select an option : " choice
 
         case "$choice" in
             1) continue ;;

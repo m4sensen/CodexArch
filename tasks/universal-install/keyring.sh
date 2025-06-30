@@ -1,5 +1,5 @@
 separator "="
-logHeading "Step 05: Keyring initialization"
+logTitle "Step 05: Keyring initialization"
 separator "="
 
 logHint "This step is optional if you're using the official Arch ISO."

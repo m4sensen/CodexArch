@@ -1,5 +1,5 @@
 separator "_"
-logHeading "Partitioning"
+logTitle "Partitioning"
 separator "_"
 
 logAttempt "check if the variables exist"
