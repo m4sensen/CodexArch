@@ -7,7 +7,7 @@ logAttempt "modify ParallelDownloads in /etc/pacman.conf ..."
 nano "/etc/pacman.conf"
 
 logAttempt "install base system packages ..."
-pacstrap /mnt base base-devel linux linux-firmware btrfs-progs nano
+install_base_system
 
 logAttempt "generate fstab for mounted system ..."
 genfstab -U /mnt >> /mnt/etc/fstab
