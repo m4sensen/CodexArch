@@ -1,5 +1,0 @@
-pacman -S timeshift htop vim curl wget sbctl nmap git sudo htop bash-completion zip unzip tar man-db ntfs-3g os-prober
-
-install_node_js
-
-install_codexBox

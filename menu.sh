@@ -1,4 +1,3 @@
-hr "="
 logLogo "
  ██████╗ ██████╗ ██████╗ ███████╗██╗  ██╗     █████╗ ██████╗  ██████╗██╗  ██╗
 ██╔════╝██╔═══██╗██╔══██╗██╔════╝╚██╗██╔╝    ██╔══██╗██╔══██╗██╔════╝██║  ██║
@@ -13,13 +12,21 @@ hr "="
 logTitle "CodexArch menu:"
 
 echo "Choose an action to continue:"
-menu_options=("Install" "Troubleshooting" "Format" "Exit")
+menu_options=("Install" "Live install" "Core install" "Troubleshooting" "Format" "Exit")
 
 select menu_option in "${menu_options[@]}"; do
     case $menu_option in
         "Install")
-            logChoice "You chose to Install."
+            logChoice "Install"
             require_file "$project_dir/bin/install.sh"
+            ;;
+        "Live install")
+            logChoice "Live install"
+            require_file "$project_dir/bin/live_install.sh"
+            ;;
+        "Core install")
+            logChoice "Core install"
+            require_file "$project_dir/bin/core_install.sh"
             ;;
         "Troubleshooting")
             logChoice "You chose Troubleshooting."

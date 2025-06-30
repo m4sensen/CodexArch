@@ -1,0 +1,6 @@
+require_file "$project_dir/tasks/universal-install/variables.sh"
+require_file "$project_dir/tasks/universal-install/time.sh"
+require_file "$project_dir/tasks/universal-install/locale.sh"
+require_file "$project_dir/tasks/universal-install/host.sh"
+require_file "$project_dir/tasks/universal-install/keyring.sh"
+require_file "$project_dir/tasks/universal-install/mirror.sh"

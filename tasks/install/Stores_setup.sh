@@ -1,2 +1,0 @@
-snap_store_install
-flatpak_store_install
