@@ -1,10 +1,10 @@
-
 FRAMEWORK_NAME="codexBash"
-PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DATE="$(date +'%Y-%m-%d %H:%M:%S')"
 
 require_Loader() {
   local file="$PROJECT_DIR/framework/loader/loader.sh"
+
   if [ -f "$file" ]; then
     source "$file"
   else
@@ -14,19 +14,21 @@ require_Loader() {
   fi
 }
 
-require_Loader &&
-loader &&
-require_file "$PROJECT_DIR/codexBash.cfg" ||
-
-exit 1
+require_Loader
+loader
+require_file "$PROJECT_DIR/codexBash.cfg"
 
 separator "="
+
 logSuccess "${RESET}${BOLD}${GREEN_500}${ITALIC}${FRAMEWORK_NAME} framework © Masensen${RESET},${GREEN_500}${BOLD} has been started successfully."
+
 separator "="
+
 logStart "[START] Starting CodexArch ..."
+
 separator "="
 
-
-
-require_file "$PROJECT_DIR/bin/universal_install.sh" 
+logChoice "Universal install"
+require_file "$PROJECT_DIR/bin/universal_install.sh"
+logChoice "Core install"
 require_file "$PROJECT_DIR/bin/core_install.sh"
