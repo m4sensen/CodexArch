@@ -1,4 +1,3 @@
-PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Ensure the script is copied into the chroot system:
 mkdir -p /mnt/root/codexArch

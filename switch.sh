@@ -28,6 +28,12 @@ logStart "[START] Starting CodexArch ..."
 
 separator "="
 
+log "$PROJECT_DIR"
+
+read -p "Press Enter to continue..."
+log "$PROJECT_DIR/bin/universal_install.sh"
+log "$PROJECT_DIR/bin/core_install.sh"
+
 logChoice "Universal install"
 require_file "$PROJECT_DIR/bin/universal_install.sh"
 logChoice "Core install"
