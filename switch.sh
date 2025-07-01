@@ -1,6 +1,6 @@
 
 FRAMEWORK_NAME="codexBash"
-PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/codexArch/.." && pwd)"
 DATE="$(date +'%Y-%m-%d %H:%M:%S')"
 
 require_Loader() {
