@@ -12,7 +12,7 @@ separator "="
 logTitle "CodexArch menu:"
 
 echo "Choose an action to continue:"
-menu_options=("Install" "Live install" "Core install" "Troubleshooting" "Format" "Exit")
+menu_options=("Install" "Live install" "Core install" "Switch" "Troubleshooting" "Format" "Exit")
 
 select menu_option in "${menu_options[@]}"; do
     case $menu_option in
@@ -40,6 +40,9 @@ select menu_option in "${menu_options[@]}"; do
             logChoice "You chose to exit"
             require_file "$PROJECT_DIR/bin/exit.sh"
             ;;
+        "Switch")
+            logChoice "You chose to swithch"
+            require_file "$PROJECT_DIR/bin/switch.sh"
         *)
             logError "Invalid option. Try again."
             ;;
