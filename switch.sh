@@ -1,6 +1,6 @@
 
 FRAMEWORK_NAME="codexBash"
-PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/codexArch/.." && pwd)"
+PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 DATE="$(date +'%Y-%m-%d %H:%M:%S')"
 
 require_Loader() {
@@ -27,4 +27,6 @@ logStart "[START] Starting CodexArch ..."
 separator "="
 
 
-bash root/codexArch/bin/universal_install.sh && bash root/codexArch/bin/core_install.sh
+
+require_file "$PROJECT_DIR/bin/universal_install.sh" 
+require_file "$PROJECT_DIR/bin/core_install.sh"
