@@ -1,2 +1,2 @@
 # snap_store_install
-safe_install flatpack
+safe_install flatpak

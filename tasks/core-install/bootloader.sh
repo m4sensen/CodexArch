@@ -22,6 +22,8 @@ echo 'GRUB_CMDLINE_LINUX="cryptdevice=UUID=[YOUR_SDA2_UUID]:cryptroot:allow-disc
 blkid -s UUID -o value ${DISK}2 >> /etc/default/grub
 # === #
 
+read -p "Press [Enter]"
+
 nano /etc/default/grub
 
 logAttempt "regenerate grub.cfg"
