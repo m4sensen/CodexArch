@@ -9,6 +9,7 @@ separator "="
 # read -p "Your choice (1/2): " mirror_choice
 
 logAttempt "Use predefined mirrors: United States, France, Switzerland"
+pacman -Sy reflector
 reflector --country "United States,France,Switzerland" --latest 50 --sort rate --protocol https --save /etc/pacman.d/mirrorlist
 
   

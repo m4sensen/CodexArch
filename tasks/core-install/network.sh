@@ -1,5 +1,3 @@
-pacman -S dhcpcd networkmanager resolvconf
+pacman -S networkmanager
 
-systemctl enable dhcpcd
 systemctl enable NetworkManager
-systemctl enable system-resolved
