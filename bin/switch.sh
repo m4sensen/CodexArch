@@ -1,0 +1,1 @@
+require_file "$PROJECT_DIR/tasks/switch/main.sh"
