@@ -28,4 +28,3 @@ separator "="
 
 
 bash root/codexArch/bin/universal_install.sh && bash root/codexArch/bin/core_install.sh
-
