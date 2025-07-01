@@ -43,6 +43,7 @@ select menu_option in "${menu_options[@]}"; do
         "Switch")
             logChoice "You chose to swithch"
             require_file "$PROJECT_DIR/bin/switch.sh"
+            ;;
         *)
             logError "Invalid option. Try again."
             ;;
