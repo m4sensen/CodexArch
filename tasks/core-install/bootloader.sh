@@ -3,7 +3,7 @@ logTitle "Bootloader"
 separator "_"
 
 logAttempt "install grub and efibootmgr."
-install grub efibootmgr
+safe_install grub efibootmgr
 
 logAttempt "install GRUB."
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB

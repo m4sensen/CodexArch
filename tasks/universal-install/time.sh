@@ -11,7 +11,7 @@ timedatectl status
 # Set timezone
 
 ln -sf "/usr/share/zoneinfo/America/New_York" /etc/localtime
-echo "TIMEZONE=$TIMEZONE" > "$PROJECT_DIR/config/codexArch.cfg"
+
 logSuccess "Timezone set to $TIMEZONE"
 
 # Generate hardware clock: set the hardware clock (RTC) to the current system time (sys).
