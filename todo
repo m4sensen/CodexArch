@@ -1,0 +1,11 @@
+add [SEARCH] to log lib
+add [SKIP] to log lib
+
+
+
+
+@ alias for imports "@/"
+
+import one folder logic
+
+exc function with bash param

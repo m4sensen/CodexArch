@@ -1,6 +1,6 @@
-loader() {
+load_framework() {
 
-  local importable_dirs=("$PROJECT_DIR/framework/functions" "$PROJECT_DIR/framework/libraries" "$PROJECT_DIR/functions")
+  local importable_dirs=("$PROJECT_DIR/framework/functions" "$PROJECT_DIR/framework/libraries")
   local loaded_importable_count=0
 
   for importable_dir in "${importable_dirs[@]}"; do

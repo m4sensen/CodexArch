@@ -12,7 +12,7 @@ separator "="
 logTitle "CodexArch menu:"
 
 echo "Choose an action to continue:"
-menu_options=("Install" "Live install" "Core install" "Switch" "Troubleshooting" "Format" "Exit")
+menu_options=("Install" "Universal install" "Live install" "Core install" "Switch" "Troubleshooting" "Format" "Exit")
 
 select menu_option in "${menu_options[@]}"; do
     case $menu_option in
@@ -20,8 +20,16 @@ select menu_option in "${menu_options[@]}"; do
             logChoice "Install"
             require_file "$PROJECT_DIR/bin/install.sh"
             ;;
+        "Universal install")
+            logChoice "Universal install"
+            require_file "$PROJECT_DIR/bin/universal_install.sh"
+            ;;
         "Live install")
             logChoice "Live install"
+            require_file "$PROJECT_DIR/bin/live_install.sh"
+            ;;
+        "Switch")
+            logChoice "Switch install"
             require_file "$PROJECT_DIR/bin/live_install.sh"
             ;;
         "Core install")
@@ -29,15 +37,15 @@ select menu_option in "${menu_options[@]}"; do
             require_file "$PROJECT_DIR/bin/core_install.sh"
             ;;
         "Troubleshooting")
-            logChoice "You chose Troubleshooting."
+            logChoice "Troubleshooting."
             require_file "$PROJECT_DIR/bin/troubleshoot.sh"
             ;;
         "Format")
-            logChoice "You chose to Format."
+            logChoice "Format."
             require_file "$PROJECT_DIR/bin/format.sh"
             ;;
         "Exit")
-            logChoice "You chose to exit"
+            logChoice "Exit"
             require_file "$PROJECT_DIR/bin/exit.sh"
             ;;
         *)

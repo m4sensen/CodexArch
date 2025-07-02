@@ -6,6 +6,7 @@ require_Loader() {
   local file="$PROJECT_DIR/framework/loader/loader.sh"
 
   if [ -f "$file" ]; then
+    echo "[Attempt] Attempt to load the loader ..."
     source "$file"
   else
     echo "[ERROR] $DATE Required file not found: $file" >&2

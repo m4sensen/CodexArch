@@ -1,5 +1,21 @@
 cryptsetup open ${DISK}2 cryptroot
 
+vgdisplay
+
+mount | grep /dev/mapper/vg0
+
+umount /mnt            # or whatever mount point you used
+umount /mnt/home       # example
+
+swapoff /dev/mapper/vg0-swap
+
+cryptsetup close cryptroot
+
+
+
+vgchange -an
+
+
 vgchange -ay
 
 mkdir -p /mnt/{home,.snapshots,vms,var,tmp,boot}

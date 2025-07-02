@@ -4,6 +4,7 @@ install_base_system() {
     base-devel
     linux
     linux-firmware
+    linux-headers
     btrfs-progs
     nano
   )
